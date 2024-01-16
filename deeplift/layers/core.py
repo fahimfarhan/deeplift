@@ -11,7 +11,8 @@ import deeplift.util
 from .helper_functions import (
  pseudocount_near_zero, add_val_to_col)
 from . import helper_functions as hf
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 
 ScoringMode = deeplift.util.enum(OneAndZeros="OneAndZeros",

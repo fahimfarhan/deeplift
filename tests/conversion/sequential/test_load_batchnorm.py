@@ -10,7 +10,8 @@ from deeplift.conversion import kerasapi_conversion as kc
 import deeplift.layers as layers
 from deeplift.layers import NonlinearMxtsMode, DenseMxtsMode
 from deeplift.util import compile_func
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 import keras
 from keras import models
 from keras import backend as K

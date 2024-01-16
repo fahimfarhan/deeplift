@@ -9,7 +9,8 @@ from collections import namedtuple
 from collections import OrderedDict
 import json
 import deeplift
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 NEAR_ZERO_THRESHOLD = 10**(-7)
 

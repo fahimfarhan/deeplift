@@ -12,7 +12,8 @@ from .helper_functions import (
  pseudocount_near_zero, add_val_to_col)
 from . import helper_functions as hf
 from .core import SingleInputMixin, Node
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 
 class BatchNormalization(SingleInputMixin, Node):

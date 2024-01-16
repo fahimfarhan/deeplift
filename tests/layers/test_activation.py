@@ -9,7 +9,8 @@ import numpy as np
 import deeplift.layers as layers
 from deeplift.layers import DenseMxtsMode
 from deeplift.util import compile_func
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 tf.logging.set_verbosity(tf.logging.ERROR)
 
 class TestActivations(unittest.TestCase):
